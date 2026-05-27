@@ -1,0 +1,29 @@
+[
+    {
+      "id": 0,
+      "image": [
+        "Los_Angeles_land_sea_mask-2022-01-01T10.png",
+        "Los_Angeles_10m_u_component_of_wind-2022-01-01T10.png",
+        "Los_Angeles_10m_v_component_of_wind-2022-01-01T10.png",
+        "Los_Angeles_2m_temperature-2022-01-01T10.png",
+        "Los_Angeles_mean_sea_level_pressure-2022-01-01T10.png",
+        "Los_Angeles_sea_surface_temperature-2022-01-01T10.png",
+        "Los_Angeles_snow_depth-2022-01-01T10.png",
+        "Los_Angeles_surface_pressure-2022-01-01T10.png",
+        "Los_Angeles_total_cloud_cover-2022-01-01T10.png",
+        "Los_Angeles_total_precipitation_6hr-2022-01-01T10.png",
+        "Los_Angeles_total_column_water_vapour-2022-01-01T10.png",
+        "Los_Angeles_total_column_water-2022-01-01T10.png"
+      ],
+      "conversations": [
+        {
+          "from": "human",
+          "value": "What image did you see."
+        },
+        {
+          "from": "gpt",
+          "value": "Breezy north to northeast winds expected this weekend under clear skies. High temperatures will warm slightly but remain several degrees below normal. A mostly dry period expected for the next couple weeks except for possibly some very light precip along the Central Coast Friday."
+        }
+      ]
+    }
+]

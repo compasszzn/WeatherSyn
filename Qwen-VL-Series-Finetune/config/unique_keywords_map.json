@@ -1,0 +1,184 @@
+{
+    "Pressure_System": {
+      "high_pressure": [
+        "High Pressure",
+        "The High",
+        "Another high",
+        "This High"
+      ],
+      "low_pressure": [
+          "Low Pressure",
+          "The Low",
+          "Low Pressure System",
+          "That low",
+          "upper low",
+          "Another low",
+          "coastal low",
+          "remnant low",
+          "The upper low",
+          "coastal low"
+      ]
+    },
+    "Temperature": {
+      "hot_temperature": [  "warming",
+      "warmer temperatures",
+      "hot temperatures",
+      "increasing temperatures",
+      "Above average temperatures",
+      "temperatures increase",
+      "Warm",
+      "Hot",
+      "High temperatures",
+      "warmup",
+      "heat",
+      "Warmer",
+      "Temperatures will moderate",
+      "Temperatures rebound",
+      "Above normal temperatures"],
+      "cool_temperature": 
+      ["Colder",
+      "dropping temperatures",
+      "Cool",
+      "frigid",
+      "Cold",
+      "cooling",
+      "Wintry",
+      "cooler",
+      "falling temperatures",
+      "Temperatures fall",
+      "below average temperatures",
+      "plummet temperatures",
+      "chills",
+      "winter weather",
+      "below normal temperatures",
+      "freeze"],
+      "moderate_temperature":
+      [  "normal temperatures",
+      "seasonable temperatures",
+      "seasonal temperatures",
+      "mild temperatures"]
+    },
+
+    "wind":{
+      "strong_wind": [
+        "Blustery",
+        "strong winds",
+        "strong westerly winds",
+        "gusts",
+        "damaging winds",
+        "strong west winds",
+        "Gusty",
+        "gusty winds",
+        "dangerous wind",
+        "Winds will increase",
+        "Winds will begin to increase",
+        "Winds will continue to be strong",
+        "increase in southwesterly winds",
+        "kicking up the winds",
+        "Winds will crank back up",
+        "winds will rapidly increase",
+        "Winds will pick up",
+        "increasing winds",
+        "crank up the winds",
+        "increase winds",
+        "high winds",
+        "winds increasing",
+        "Winds will also be on the increase",
+        "increase in winds",
+        "winds will strengthen",
+        "winds to increase",
+        "winds will be on the increase",
+        "Strong southwest winds",
+        "Stronger winds",
+        "winds will be strong"
+        
+      ],
+      "light_wind": [
+        "Windy",
+        "breezy to windy",
+        "Breezy",
+        "Winds will decrease",
+        "Winds will taper off",
+        "Winds will subside",
+        "less wind",
+        "winds will diminish",
+        "breezes",
+        "Winds subside",
+        "weak wind"
+      ]
+    },
+
+    "Wind_Flow_System": {
+      "Onshore": [
+          "Onshore Flow"
+      ],
+      "Offshore": [
+          "Offshore Flow"
+      ]
+    },
+
+    "Frontal_System": {
+      "Cold_Front": [
+          "Cold Front",
+          "backdoor cold front"
+      ],
+      "Warm_Front": [
+          "Warm Front"
+      ]
+    },
+
+    "Synoptic_Feature": {
+      "Ridge": ["Ridge"],
+      "Trough": ["Trough"]
+    },
+
+    "Humidity":{
+      "dry_air": [
+        "low humidity",
+        "lower humidity",
+        "Dry",
+        "Drier"
+      ],
+      "moist_air": [
+        "high humidity",
+        "raising humidity",
+        "moist",
+        "damp",
+        "humid",
+        "wet"
+      ]
+    },
+
+    "Event": {
+      "Precipitation": [
+          "Precipitation",
+          "Rain",
+          "Rainfall",
+          "Shower",
+          "Drizzle",
+          "drizzly",
+          "Showers",
+          "Rain showers"
+      ],
+      "Snow":[
+        "Flurries",
+        "Snow",
+        "Snowfall",
+        "Snows",
+        "Snow Shower",
+        "Snow Showers",
+        "hail",
+        "hails"
+        
+      ],
+      "Storm": [ 
+          "Storm",
+          "storms",
+          "Thunderstorm",
+          "thunderstorms",
+          "Hurricane",
+          "cyclone"
+      ]
+  }
+}
+  

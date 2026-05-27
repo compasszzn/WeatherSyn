@@ -1,0 +1,57 @@
+### model
+model_name_or_path: /model/WeathersynRFT
+image_max_pixels: 200704
+video_max_pixels: 16384
+trust_remote_code: true
+enable_liger_kernel: false
+use_unsloth_gc: true
+### method
+stage: dpo
+do_train: true
+finetuning_type: full
+freeze_vision_tower: true
+freeze_multi_modal_projector: true
+freeze_language_model: false
+pref_ftx: 0
+pref_beta: 0.1
+pref_loss: sigmoid
+deepspeed: examples/deepspeed/ds_z3_offload_config.json
+
+### dataset
+dataset: weatherreport
+media_dir: /WSInstruct/processpng_synoptic_small
+template: qwen3_vl
+cutoff_len: 10000
+max_samples: 100000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### output
+output_dir: /model/WeathersynDPO
+logging_steps: 10
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: swanlab  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 2
+learning_rate: 1e-6
+num_train_epochs: 1
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+## eval
+# val_size: 0.1
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 500
+
+# report_to: wandb
+# run_name: test_run # optional

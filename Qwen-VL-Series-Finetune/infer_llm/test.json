@@ -1,0 +1,118 @@
+{
+    "sys_prompt": " As an AI assistant with expertise in severe weather analysis and forecasting, you are equipped to interpret a comprehensive figures that illustrating various weather variables crucial for understanding the latest weather conditions across the contiguous United States. Your responsibility as a weather forecaster is to provide accurate and timely insights into weather conditions.",
+    "prompt_template": "\n  <Thought process>\n      Use the following clues to generate a concise natural language weather forecast report based on the figures.:\n        1. Go through each depicted weather field within the figures in <Parameters> for weather analysis one by one and consider whether each weather analysis field shown signs of potential for future weather.\n        2. Focus on general weather forecast descriptions instead of overly detailed reports.\n   Output the weather forecast report directly.\n  </Thought process>\n    <Question>Please analyze the following figures and generate a concise weather forecast report based on the observed patterns.</Question>\n <Examples> Below are a few examples of weather analysis to help understand how the region and type of concern relate to different weather conditions:\n  ",
+    "para_description": {
+        "land_sea_mask":"This image refers the proportion of land, as opposed to ocean or inland waters",
+        "10m_u_component_of_wind":"This image refers to the eastward component of the 10m wind. It is the horizontal speed of air moving towards the east, at a height of ten metres above the surface of the Earth",
+        "10m_v_component_of_wind":"This image refers to the northward component of the 10m wind. It is the horizontal speed of air moving towards the north, at a height of ten metres above the surface of the Earth",
+        "2m_temperature":"This image refers to the temperature of air at 2m above the surface of land, sea or in-land waters.",
+        "mean_sea_level_pressure":"This image refers to the pressure of the atmosphere adjusted to the height of mean sea level.",
+        "sea_surface_temperature":"This image refers to the temperature of sea water near the surface.",
+        "snow_depth":"This image refers tothe depth of snow from the snow-covered area.",
+        "surface_pressure":"This parameter is the pressure of the atmosphere on the surface of land, sea and in-land water.",
+        "total_cloud_cover":"This parameter is the proportion of a grid box area covered by cloud.",
+        "total_precipitation_6hr":"This image refers to the total precipitation over the past 6 hours",
+        "total_column_water_vapour":"This image refers to the total amount of water vapour in a vertical column of the atmosphere, from the surface to the top of the atmosphere",
+        "total_column_water":"This image refers to the total amount of liquid water in a vertical column of the atmosphere",
+        "geopotential-200":"This image refers to the geopotential height at the 200 hPa pressure level, which can be used to identify weather systems such as cyclones, anticyclones, troughs and ridges.",
+        "geopotential-500":"This image refers to the geopotential height at the 500 hPa pressure level, which can be used to identify weather systems such as cyclones, anticyclones, troughs and ridges.",
+        "geopotential-700":"This image refers to the geopotential height at the 700 hPa pressure level, which can be used to identify weather systems such as cyclones, anticyclones, troughs and ridges.",
+        "geopotential-850":"This image refers to the geopotential height at the 850 hPa pressure level, which can be used to identify weather systems such as cyclones, anticyclones, troughs and ridges.",
+        "specific_humidity-200":"This image refers to the mass of water vapour per kilogram of moist air at the 200 hPa pressure level.",
+        "specific_humidity-500":"This image refers to the mass of water vapour per kilogram of moist air at the 500 hPa pressure level.",
+        "specific_humidity-700":"This image refers to the mass of water vapour per kilogram of moist air at the 700 hPa pressure level.",
+        "specific_humidity-850":"This image refers to the mass of water vapour per kilogram of moist air at the 850 hPa pressure level.",
+        "temperature-200":"This image refers to the temperature in the atmosphere at the 200 hPa hPa pressure level respectively.",
+        "temperature-500":"This image refers to the temperature in the atmosphere at the 500 hPa pressure level.",
+        "temperature-700":"This image refers to the temperature in the atmosphere at the 700 hPa pressure level.",
+        "temperature-850":"This image refers to the temperature in the atmosphere at the 850 hPa pressure level.",
+        "u_component_of_wind-200":"This image refers to the eastward component of the wind at the 200 hPa pressure level respectively. It is the horizontal speed of air moving towards the east.",
+        "u_component_of_wind-500":"This image refers to the eastward component of the wind at the 500 hPa pressure level. It is the horizontal speed of air moving towards the east.",
+        "u_component_of_wind-700":"This image refers to the eastward component of the wind at the 700 hPa pressure level. It is the horizontal speed of air moving towards the east.",
+        "u_component_of_wind-850":"This image refers to the eastward component of the wind at the 850 hPa pressure level. It is the horizontal speed of air moving towards the east.",
+        "v_component_of_wind-200":"This image refers to the northward component of the wind at the 200 hPa pressure level respectively. It is the horizontal speed of air moving towards the north.",
+        "v_component_of_wind-500":"This image refers to the northward component of the wind at the 500 hPa pressure level. It is the horizontal speed of air moving towards the north.",
+        "v_component_of_wind-700":"This image refers to the northward component of the wind at the 700 hPa pressure level. It is the horizontal speed of air moving towards the north.",
+        "v_component_of_wind-850":"This image refers to the northward component of the wind at the 850 hPa pressure level. It is the horizontal speed of air moving towards the north."
+    },
+    "samples": [
+        {
+            "md_id": "2020_md0022",
+            "area_ans": "Weather forecast for today: Mainly fine and dry. The maximum temperature will be around 21 degrees. Moderate to fresh east to northeasterly winds.",
+            "time": "2022-01-01T08",
+            "para_paths": [
+                "Hong_Kong_land_sea_mask-2022-01-01T08.png",
+                "Hong_Kong_10m_u_component_of_wind-2022-01-01T08.png",
+                "Hong_Kong_10m_v_component_of_wind-2022-01-01T08.png",
+                "Hong_Kong_2m_temperature-2022-01-01T08.png",
+                "Hong_Kong_mean_sea_level_pressure-2022-01-01T08.png",
+                "Hong_Kong_sea_surface_temperature-2022-01-01T08.png",
+                "Hong_Kong_snow_depth-2022-01-01T08.png",
+                "Hong_Kong_surface_pressure-2022-01-01T08.png",
+                "Hong_Kong_total_cloud_cover-2022-01-01T08.png",
+                "Hong_Kong_total_precipitation_6hr-2022-01-01T08.png",
+                "Hong_Kong_total_column_water_vapour-2022-01-01T08.png",
+                "Hong_Kong_total_column_water-2022-01-01T08.png"
+            ],
+            "examples": [
+                {
+                    "md_id": "2018_md0262",
+                    "area_ans": "Weather forecast for today: Mainly fine and dry. The maximum temperature will be around 21 degrees. Moderate to fresh east to northeasterly winds.",
+                    "time": "2022-01-01T08",
+                    "para_paths": [
+                        "Hong_Kong_land_sea_mask-2022-01-01T08.png",
+                        "Hong_Kong_10m_u_component_of_wind-2022-01-01T08.png",
+                        "Hong_Kong_10m_v_component_of_wind-2022-01-01T08.png",
+                        "Hong_Kong_2m_temperature-2022-01-01T08.png",
+                        "Hong_Kong_mean_sea_level_pressure-2022-01-01T08.png",
+                        "Hong_Kong_sea_surface_temperature-2022-01-01T08.png",
+                        "Hong_Kong_snow_depth-2022-01-01T08.png",
+                        "Hong_Kong_surface_pressure-2022-01-01T08.png",
+                        "Hong_Kong_total_cloud_cover-2022-01-01T08.png",
+                        "Hong_Kong_total_precipitation_6hr-2022-01-01T08.png",
+                        "Hong_Kong_total_column_water_vapour-2022-01-01T08.png",
+                        "Hong_Kong_total_column_water-2022-01-01T08.png"
+                    ]
+                },
+                {
+                    "md_id": "2018_md0293",
+                    "area_ans": "Weather forecast for today: Mainly fine and dry. The maximum temperature will be around 21 degrees. Moderate to fresh east to northeasterly winds.",
+                    "time": "2022-01-01T08",
+                    "para_paths": [
+                        "Hong_Kong_land_sea_mask-2022-01-01T08.png",
+                        "Hong_Kong_10m_u_component_of_wind-2022-01-01T08.png",
+                        "Hong_Kong_10m_v_component_of_wind-2022-01-01T08.png",
+                        "Hong_Kong_2m_temperature-2022-01-01T08.png",
+                        "Hong_Kong_mean_sea_level_pressure-2022-01-01T08.png",
+                        "Hong_Kong_sea_surface_temperature-2022-01-01T08.png",
+                        "Hong_Kong_snow_depth-2022-01-01T08.png",
+                        "Hong_Kong_surface_pressure-2022-01-01T08.png",
+                        "Hong_Kong_total_cloud_cover-2022-01-01T08.png",
+                        "Hong_Kong_total_precipitation_6hr-2022-01-01T08.png",
+                        "Hong_Kong_total_column_water_vapour-2022-01-01T08.png",
+                        "Hong_Kong_total_column_water-2022-01-01T08.png"
+                    ]
+                },
+                {
+                    "md_id": "2018_md0222",
+                    "area_ans": "Weather forecast for today: Mainly fine and dry. The maximum temperature will be around 21 degrees. Moderate to fresh east to northeasterly winds.",
+                    "time": "2022-01-01T08",
+                    "para_paths": [
+                        "Hong_Kong_land_sea_mask-2022-01-01T08.png",
+                        "Hong_Kong_10m_u_component_of_wind-2022-01-01T08.png",
+                        "Hong_Kong_10m_v_component_of_wind-2022-01-01T08.png",
+                        "Hong_Kong_2m_temperature-2022-01-01T08.png",
+                        "Hong_Kong_mean_sea_level_pressure-2022-01-01T08.png",
+                        "Hong_Kong_sea_surface_temperature-2022-01-01T08.png",
+                        "Hong_Kong_snow_depth-2022-01-01T08.png",
+                        "Hong_Kong_surface_pressure-2022-01-01T08.png",
+                        "Hong_Kong_total_cloud_cover-2022-01-01T08.png",
+                        "Hong_Kong_total_precipitation_6hr-2022-01-01T08.png",
+                        "Hong_Kong_total_column_water_vapour-2022-01-01T08.png",
+                        "Hong_Kong_total_column_water-2022-01-01T08.png"
+                    ]
+                }
+            ]
+        }
+    ]
+}
