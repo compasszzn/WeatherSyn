@@ -140,11 +140,11 @@ if __name__ == "__main__":
         os.makedirs(output_dir, exist_ok=True)
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
         if "gpt" in opt.model:
-            azure_endpoint = "https://35.aigcbest.top/v1"
-            api_key = "sk-H83OuMQHNmIjnRNDuswNvEv6bNDA2yrKK3KuRvySw1A7Ge1O"
+            azure_endpoint = ""
+            api_key = ""
         elif "gemini" or "claude" in opt.model:
-            azure_endpoint = "https://api2.aigcbest.top/v1"
-            api_key = "sk-DMus0ZE9nPsOiAewkkGg3kLa9iceBoLXZX1zBlzyULinD6tJ"
+            azure_endpoint = ""
+            api_key = ""
         client = OpenAI(base_url = azure_endpoint,api_key=api_key)
 
         input_path = f"Qwen-VL-Series-Finetune/output/combined/combined_{area_name}.json"

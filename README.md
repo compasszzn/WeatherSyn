@@ -24,7 +24,7 @@ recipe — **SFT → RFT → DPO** — on the **WSInstruct** dataset.
 - [x] Training Code
 - [x] Automatic Claim Evaluation Code
 - [x] Reference Evaluation Code
-- [ ] LLM Evaluation Code
+- [x] LLM Evaluation Code
 
 
 
@@ -67,6 +67,8 @@ pip install flash-attn --no-build-isolation
 
 - **Dataset (WSInstruct):** [compasszzn/WSInstruct](https://huggingface.co/datasets/compasszzn/WSInstruct)
 - **Model (WeatherSyn-SFT):** [compasszzn/WeatherSynSFT](https://huggingface.co/compasszzn/WeatherSynSFT)
+- **Model (WeatherSyn-RFT):** [compasszzn/WeatherSynSFT](https://huggingface.co/compasszzn/WeatherSynRFT)
+- **Model (WeatherSyn-DPO):** [compasszzn/WeatherSynSFT](https://huggingface.co/compasszzn/WeatherSynDPO)
 
 After downloading, the training/inference scripts expect the data laid out as:
 
