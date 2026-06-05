@@ -14,7 +14,7 @@ def generate_data(area, level):
     if level=='single':
         train_json = f"/WSInstruct/json/sft/annotation_train_{area}.json"
         test_json = f"/WSInstruct/json/sft/annotation_test_{area}.json"
-        output_path = f"/hpc2hdd/home/mpeng885/zzn_data/jsonbig/datajson/process_data/synoptic/datajson/combined/combined_{area}.json"
+        output_path = f"Qwen-VL-Series-Finetune/output/combined/combined_{area}.json"
 
     # 读取 train 数据
     with open(train_json, 'r') as f:

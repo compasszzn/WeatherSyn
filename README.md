@@ -4,8 +4,8 @@ This is the **official PyTorch Lightning implementation** of the paper:
 **WeatherSyn: An Instruction Tuning MLLM For Weather Forecasting Report Generation**, accepted at **ICML 2026**.  
 [![arXiv](https://img.shields.io/badge/arXiv-2510.04017-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.07522)
 [![ICML 2026](https://img.shields.io/badge/ICML-2026-blue)](https://icml.cc/virtual/2026/poster/63486)
-[![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-ffd21e?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/compasszzn/WSInstruct)
-[![Model](https://img.shields.io/badge/Model-Hugging%20Face-ffd21e?logo=huggingface&logoColor=black)](https://huggingface.co/compasszzn/WeatherSynSFT)
+[![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-ffd21e?logo=huggingface&logoColor=yellow)](https://huggingface.co/datasets/compasszzn/WSInstruct)
+[![Model](https://img.shields.io/badge/Model-Hugging%20Face-ffd21e?logo=huggingface&logoColor=yellow)](https://huggingface.co/compasszzn/WeatherSynSFT)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/hanjq17/GMN/blob/main/LICENSE)
 
 ---
@@ -23,9 +23,9 @@ recipe — **SFT → RFT → DPO** — on the **WSInstruct** dataset.
 - [x] Upload Model
 - [x] Training Code
 - [x] Automatic Claim Evaluation Code
-- [ ] Reference Evaluation Code
+- [x] Reference Evaluation Code
 - [ ] LLM Evaluation Code
-- [ ] Dataset Construction Pipeline
+
 
 
 ## Repository Structure
@@ -104,7 +104,8 @@ The full recipe is split into three stages, each under
 | 3 | `step3_deployment_qwen.sh` | **Automatic Claim Evaluation** Serve a judge LLM (vLLM, e.g. Qwen2.5-72B) for |
 | 4 | `step4_extract_*_keyword.sh` | **Automatic Claim Evaluation** Extract weather claims/keywords from generations |
 | 5 | `step5_compute_f1.sh`  | **Automatic Claim Evaluation** Score extracted claims against references (F1) |
-
+| 6 | `step6_reference_evaluation.sh`  | **Reference Evaluation** Compute BLEU-1, ROUGE-L, METEOR score |
+| 7 | `step7_llm_evaluation.sh`  | **LLM Evaluation** LLM rank the results |
 ### Stage 1 — SFT (Supervised Fine-Tuning)
 
 ```bash
@@ -132,25 +133,28 @@ bash Qwen-VL-Series-Finetune/pipeline/step3_dpo/step1_our_dpo.sh
 Runs preference optimization via **LLaMA-Factory**
 (`llamafactory-cli train examples/our/qwen3_vl_full_sft.yaml`).
 
-<!-- ### Evaluation
 
-The **Automatic Claim Evaluation** lives in
-`Qwen-VL-Series-Finetune/evaluate/automatic_claim_evaluation/`:
+## Baseline Inference
 
-- `eval_llm_keyword_multi.py` — extract weather keywords/claims from model outputs
-  (uses the deployed judge LLM).
-- `score.py` — aggregate keyword-level **F1** against references, using the keyword
-  map in `Qwen-VL-Series-Finetune/config/unique_keywords_map.json`. -->
+```
+step1 generate few shot prompt
+python Qwen-VL-Series-Finetune/baseline/step1_process_annotation_to_prompt.py
+step2 fewshot result
+python Qwen-VL-Series-Finetune/baseline/step2_baseline_fewshot.py
+step3 zeroshot result
+python Qwen-VL-Series-Finetune/baseline/step2_baseline_zeroshot.py
+```
 
-<!-- ## Dataset Construction
-
-Scripts for building WSInstruct and the benchmark from raw meteorological data are
-under `Dataset_and_Benchmark/` and `data_download/`, covering data download
-(ERA5 / HRES), region filtering, location resolution, chart rendering (`process_png`)
-and weather-glossary extraction.
-
- -->
-
+## Citation
+If you find this work useful, please consider citing: 
+```bibtex 
+@article{zheng2026weathersyn,
+  title={WeatherSyn: An Instruction Tuning MLLM For Weather Forecasting Report Generation},
+  author={Zheng, Zinan and Liu, Yang and Chen, Nuo and Zheng, Juepeng and Cheng, Hong and Li, Jia},
+  journal={arXiv preprint arXiv:2605.07522},
+  year={2026}
+}
+```
 ## Acknowledgement
 
 This project is based on
