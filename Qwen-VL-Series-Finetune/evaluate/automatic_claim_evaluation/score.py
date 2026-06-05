@@ -176,7 +176,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--base_path",
         type=str,
-        default="/hpc2hdd/home/mpeng885/zzn_data/jsonbig/datajson/process_data/synoptic/datajson",
+        default="Qwen-VL-Series-Finetune/output",
         help="Base path"
     )
 

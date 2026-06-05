@@ -175,7 +175,7 @@ def main(args):
             need_station = information['test']
             config.final_stations = need_station
 
-    for area in config.final_stations[15:]:
+    for area in config.final_stations:
         question_file = os.path.join(f"{args.question_file}/annotation_{args.task}_{area}.json")
 
         with open(question_file, "r") as f:
@@ -290,7 +290,7 @@ if __name__ == "__main__":
     parser.add_argument("--model-base", type=str, default="Qwen/Qwen3-VL-8B-Instruct")
     parser.add_argument("--image-path", type=str, default="/hpc2hdd/home/mpeng885/zzn_data/jsonbig/datajson/process_data/synoptic/processpng")
     parser.add_argument("--question_file", type=str, default="/hpc2hdd/home/mpeng885/zzn_data/jsonbig/datajson/process_data/synoptic/datajson/annotation")
-    parser.add_argument("--answer_file", type=str, default="/hpc2hdd/home/mpeng885/zzn_data/json/datajson/output_qwen_ood_NE_NW")
+    parser.add_argument("--answer_file", type=str, default="Qwen-VL-Series-Finetune/output/output_qwen_ood_NE_NW")
     parser.add_argument("--task", type=str, default="test")
     parser.add_argument("--data_type", type=str, default="single")
     parser.add_argument("--fps", type=float, default=5.0) 

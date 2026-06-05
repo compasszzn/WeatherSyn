@@ -290,7 +290,7 @@ def main():
     parser.add_argument(
         "--base_dir",
         type=str,
-        default="/hpc2hdd/home/mpeng885/zzn_data/jsonbig/datajson/process_data/synoptic/datajson/rebutal_result_correctness_llm",
+        default="Qwen-VL-Series-Finetune/output/rebutal_result_correctness_llm",
         help="Base directory containing all model results"
     )
     

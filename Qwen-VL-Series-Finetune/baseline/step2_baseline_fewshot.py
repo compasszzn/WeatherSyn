@@ -19,7 +19,7 @@ llm_to_api = {
     "gpt-oss-120b": "gpt-oss-120b",
     "claude-3-7-sonnet-20250219": "claude-3-7-sonnet-20250219",
     "deepseek-chat":"deepseek-chat",
-    "omniearth":"/hpc2hdd/home/mpeng885/zzn_data/jsonbig/datajson/process_data/synoptic/outputmodel/omniearth",
+    "omniearth":"omniearth",
     "gemini-3":"gemini-3-pro-preview",
     "gpt-5.2":"gpt-5.2"
 }
@@ -131,7 +131,7 @@ def encode_question(weather_parameters: list[str], hint=None) -> list[str]:
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="settings")
-    parser.add_argument("-s", "--save_folder", type=str, default="/hpc2hdd/home/mpeng885/zzn_data/jsonbig/datajson/process_data/synoptic/datajson", help="output results file path")
+    parser.add_argument("-s", "--save_folder", type=str, default="Qwen-VL-Series-Finetune/output", help="output results file path")
     parser.add_argument("--image_path", type=str, default="/WSInstruct/processpng_synoptic_small", help="input prompt file path")
     parser.add_argument("-m", "--model", type=str, default="gemini-3", help="model id")
     parser.add_argument("--area", default="AKQ",type=str, help="The path to save annotation final combined json file.")
@@ -166,7 +166,7 @@ if __name__ == "__main__":
                 api_key = "EMPTY"
             )
         
-        input_path = f"/hpc2hdd/home/mpeng885/zzn_data/jsonbig/datajson/process_data/synoptic/datajson/combined/combined_{area_name}.json"
+        input_path = f"Qwen-VL-Series-Finetune/output/combined/combined_{area_name}.json"
         with open(input_path, 'r') as file:
             data = json.load(file)
         

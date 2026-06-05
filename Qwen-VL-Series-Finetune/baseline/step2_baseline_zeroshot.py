@@ -126,7 +126,7 @@ def encode_question(weather_parameters: list[str], hint=None) -> list[str]:
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="settings")
-    parser.add_argument("-s", "--save_folder", type=str, default="/hpc2hdd/home/mpeng885/zzn_data/jsonbig/datajson/process_data/synoptic/datajson", help="output results file path")
+    parser.add_argument("-s", "--save_folder", type=str, default="Qwen-VL-Series-Finetune/output", help="output results file path")
     parser.add_argument("--image_path", type=str, default="/WSInstruct/processpng_synoptic_small", help="input prompt file path")
     parser.add_argument("-m", "--model", type=str, default="gemini-2.5-flash", help="model id")
     parser.add_argument("--area", default="AKQ",type=str, help="The path to save annotation final combined json file.")
@@ -134,7 +134,7 @@ if __name__ == "__main__":
     parser.add_argument("--shot", default=2,type=int, help="The path to save annotation final combined json file.")
     opt = parser.parse_args()
     area_names = config.final_stations
-    for area_name in area_names[20:]:
+    for area_name in area_names:
         output_dir = os.path.join(opt.save_folder,f'output_{opt.model}_shot_{opt.shot}',f"output_test_{area_name}")
         save_path = os.path.join(opt.save_folder,f'output_{opt.model}_shot_{opt.shot}',f"output_test_{area_name}.jsonl")
         os.makedirs(output_dir, exist_ok=True)
@@ -147,7 +147,7 @@ if __name__ == "__main__":
             api_key = "sk-DMus0ZE9nPsOiAewkkGg3kLa9iceBoLXZX1zBlzyULinD6tJ"
         client = OpenAI(base_url = azure_endpoint,api_key=api_key)
 
-        input_path = f"/hpc2hdd/home/mpeng885/zzn_data/jsonbig/datajson/process_data/synoptic/datajson/combined/combined_{area_name}.json"
+        input_path = f"Qwen-VL-Series-Finetune/output/combined/combined_{area_name}.json"
         with open(input_path, 'r') as file:
             data = json.load(file)
         

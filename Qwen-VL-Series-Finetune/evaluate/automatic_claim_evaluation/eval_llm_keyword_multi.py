@@ -107,7 +107,7 @@ def extract_all_keywords_with_llm(daily_forecast, group_dict):
     ]
     # 🔥 Call the LLM (replace this with your actual API call)
     completion = client.chat.completions.create(
-        model="/hpc2hdd/home/mpeng885/zzn_data/model/Qwen2.5-72B-Instruct",
+        model="model/Qwen2.5-72B-Instruct",
         messages=pred_message,
     )
     answer_response_message = json.loads(completion.choices[0].message.content)
@@ -214,7 +214,7 @@ def process_single_file(file, prediction_set, output_dir, valid_keywords, keywor
     except Exception as e:
         return file, False, str(e)
 
-def annotate(prediction_set, caption_files, output_dir, keyword_dict,map_keyword_dict,args, max_workers=8):
+def annotate(prediction_set, caption_files, output_dir,map_keyword_dict,args, max_workers=8):
     """
     Evaluates question and answer pairs using GPT-3
     Returns a score for correctness.
@@ -283,11 +283,6 @@ def main(args):
         with open(map_json_path, "r", encoding="utf-8") as f:
             map_keyword_dict = json.load(f)
 
-        key_word_json_path = "/hpc2hdd/home/mpeng885/zzn/project/video2text/Dataset_and_Benchmark/Awash/rewrite/unique_keywords.json"
-
-        with open(key_word_json_path, "r", encoding="utf-8") as f:
-            keyword_dict = json.load(f)
-
         # Iterate through each sample in pred_contents
         for sample in pred_contents:
             image_id = sample['image_name'][0][-17:]
@@ -348,7 +343,7 @@ def main(args):
                 print(f"incomplete_files: {len(incomplete_files)}")
                 if len(incomplete_files) == 0:
                     break
-                annotate(prediction_set,incomplete_files,output_dir,keyword_dict,map_keyword_dict, args, max_workers=args.max_workers)
+                annotate(prediction_set,incomplete_files,output_dir,map_keyword_dict, args, max_workers=args.max_workers)
 
             except Exception as e:
                 traceback.print_exc()

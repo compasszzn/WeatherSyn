@@ -88,7 +88,7 @@ def extract_all_keywords_with_llm(daily_forecast, group_dict):
     ]
     # 🔥 Call the LLM (replace this with your actual API call)
     completion = client.chat.completions.create(
-        model="/hpc2hdd/home/mpeng885/zzn_data/model/Qwen2.5-72B-Instruct",
+        model="model/Qwen2.5-72B-Instruct",
         messages=pred_message,
     )
     answer_response_message = json.loads(completion.choices[0].message.content)
