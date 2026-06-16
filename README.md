@@ -146,6 +146,14 @@ python Qwen-VL-Series-Finetune/baseline/step2_baseline_fewshot.py
 step3 zeroshot result
 python Qwen-VL-Series-Finetune/baseline/step2_baseline_zeroshot.py
 ```
+## Contact
+
+For feedback, or collaboration opportunities, feel free to reach out!
+
+For general questions, feel free to drop us an email at zzheng078(at)connect(dot)hkust-gz(dot)edu(dot)cn
+
+If you're running into code or implementation issues, the best way is to open an issue right here in the repo (highly recommended!) — chances are your question might help someone else too.
+
 
 ## Citation
 If you find this work useful, please consider citing: 
